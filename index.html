@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday.exe 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="particles"></div>
+
+  <!-- TERMINAL -->
+  <section id="terminal-screen" class="screen active">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">birthday@system:~</span>
+      </div>
+      <div class="terminal-body">
+        <div id="terminal-output"></div>
+        <span class="cursor">█</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOADING -->
+  <section id="loading-screen" class="screen">
+    <div class="loader-wrap">
+      <div class="code-icon">&lt;/&gt;</div>
+      <h1>Compiling Birthday...</h1>
+      <p id="loading-text">Initializing happiness modules...</p>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <div id="percent">0%</div>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY -->
+  <section id="birthday-screen" class="screen">
+    <div class="birthday-card">
+      <div class="badge">BUILD SUCCESSFUL ✓</div>
+      <p class="mini">SYSTEM MESSAGE // 06.10.2026</p>
+      <h1>Happy Birthday,<br><span id="person-name">YOUR NAME</span> 🎂</h1>
+      <p class="sub">A special build has been deployed just for you.</p>
+
+      <div class="code-box">
+        <span>const</span> happiness = <b>Infinity</b>;<br>
+        <span>const</span> memories = <b>countless</b>;<br>
+        <span>const</span> future = <b>"BRIGHT"</b>;<br><br>
+        <span class="comment">// Status: LEGENDARY 🚀</span>
+      </div>
+
+      <button id="open-btn">OPEN SECRET MESSAGE →</button>
+    </div>
+  </section>
+
+  <!-- MEMORIES -->
+  <section id="memories-screen" class="screen">
+    <div class="content">
+      <p class="mini">/home/birthday/memories</p>
+      <h1>Some memories. <span>One special day.</span></h1>
+      <p class="intro">images in the secret msg can be changed ok baby <b>photos</b> hope this give you smile on your face That's it.</p>
+
+      <div class="gallery">
+        <div class="photo-card"><img src="photos/photo1.jpg" alt="Memory 1"><p>Memory_01.jpg</p></div>
+        <div class="photo-card"><img src="photos/photo2.jpg" alt="Memory 2"><p>Memory_02.jpg</p></div>
+        <div class="photo-card"><img src="photos/photo3.jpg" alt="Memory 3"><p>Memory_03.jpg</p></div>
+        <div class="photo-card"><img src="photos/photo4.jpg" alt="Memory 4"><p>Memory_04.jpg</p></div>
+        <div class="photo-card"><img src="photos/photo5.jpg" alt="Memory 5"><p>Memory_05.jpg</p></div>
+        <div class="photo-card"><img src="photos/photo6.jpg" alt="Memory 6"><p>Memory_06.jpg</p></div>
+      </div>
+
+      <div class="final-message">
+        <div class="terminal-label">secret_message.txt</div>
+        <p>
+          Life gets busy, people change, and years keep moving...
+          but some people make the journey a little more special just by being there.
+        </p>
+        <h2>Here's to another amazing year. 🎂✨</h2>
+        <p class="signature">— From someone who wanted your birthday to be a little different.</p>
+      </div>
+
+      <button id="replay-btn">↻ RUN BIRTHDAY.EXE AGAIN</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

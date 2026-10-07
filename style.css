@@ -1,0 +1,44 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#39ff88;--cyan:#35d9ff;--bg:#050807;--panel:#0b1110}
+body{font-family:Consolas,"Courier New",monospace;background:var(--bg);color:#eafff1;overflow-x:hidden}
+.screen{min-height:100vh;display:none;align-items:center;justify-content:center;padding:30px}
+.screen.active{display:flex}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(rgba(57,255,136,.16) 1px,transparent 1px);background-size:35px 35px;animation:move 12s linear infinite}
+@keyframes move{to{background-position:35px 35px}}
+.terminal{width:min(900px,95vw);background:#07100c;border:1px solid #1d6b43;border-radius:12px;box-shadow:0 0 60px rgba(57,255,136,.13);overflow:hidden;position:relative;z-index:1}
+.terminal-bar{height:42px;background:#101614;display:flex;align-items:center;padding:0 15px;gap:8px;border-bottom:1px solid #183125}
+.dot{width:12px;height:12px;border-radius:50%}.red{background:#ff5f56}.yellow{background:#ffbd2e}.green{background:#27c93f}
+.terminal-title{margin-left:10px;color:#789083;font-size:13px}
+.terminal-body{padding:30px;min-height:370px;font-size:clamp(13px,2vw,17px);line-height:2;color:var(--green)}
+.cursor{animation:blink .8s infinite}@keyframes blink{50%{opacity:0}}
+.loader-wrap{text-align:center;width:min(650px,90vw);position:relative;z-index:1}
+.code-icon{font-size:70px;color:var(--green);text-shadow:0 0 25px rgba(57,255,136,.6);margin-bottom:15px}
+.loader-wrap h1{font-size:clamp(25px,5vw,44px);margin-bottom:15px}
+.loader-wrap p{color:#8aa797;margin-bottom:25px}
+.progress{height:13px;border:1px solid #205b3c;border-radius:20px;padding:2px;margin-bottom:12px;background:#07100c}
+#progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--cyan));border-radius:20px;box-shadow:0 0 18px rgba(57,255,136,.5)}
+#percent{color:var(--green)}
+#birthday-screen{background:radial-gradient(circle at center,rgba(26,95,58,.22),transparent 55%)}
+.birthday-card{text-align:center;width:min(720px,95vw);position:relative;z-index:1;padding:45px 25px}
+.badge{display:inline-block;border:1px solid var(--green);color:var(--green);padding:7px 14px;border-radius:30px;font-size:12px;letter-spacing:1px;margin-bottom:25px;box-shadow:0 0 18px rgba(57,255,136,.12)}
+.mini{color:#628271;font-size:12px;letter-spacing:2px;margin-bottom:16px}
+.birthday-card h1{font-size:clamp(38px,8vw,75px);line-height:1.05;margin-bottom:18px}
+.birthday-card h1 span{color:var(--green);text-shadow:0 0 30px rgba(57,255,136,.3)}
+.sub{color:#93aa9c;margin-bottom:25px}
+.code-box{text-align:left;display:inline-block;background:#07100c;border:1px solid #183c29;border-radius:10px;padding:20px 28px;color:#c9e8d5;line-height:1.8;margin-bottom:30px;box-shadow:0 0 35px rgba(0,0,0,.3)}
+.code-box span{color:#35d9ff}.code-box b{color:#ffd76a}.code-box .comment{color:#5f8b72}
+button{font:inherit;background:var(--green);color:#031007;border:0;border-radius:8px;padding:14px 20px;font-weight:bold;cursor:pointer;transition:.25s;box-shadow:0 0 25px rgba(57,255,136,.2)}
+button:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(57,255,136,.4)}
+.content{width:min(1050px,95vw);position:relative;z-index:1;padding:30px 0}
+.content h1{font-size:clamp(28px,5vw,52px);margin-bottom:10px}.content h1 span{color:var(--green)}
+.intro{color:#82968a;margin-bottom:30px}.intro b{color:#c6e6d1}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.photo-card{background:#0a100e;border:1px solid #183325;border-radius:10px;overflow:hidden;transition:.3s}
+.photo-card:hover{transform:translateY(-5px);border-color:#39ff88;box-shadow:0 15px 35px rgba(0,0,0,.3)}
+.photo-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:linear-gradient(135deg,#101b16,#07100c)}
+.photo-card p{padding:12px;color:#668273;font-size:12px}
+.final-message{margin:35px 0;padding:28px;background:#07100c;border:1px solid #183c29;border-radius:12px;text-align:center}
+.terminal-label{color:var(--green);font-size:12px;margin-bottom:18px}.final-message p{color:#a4b7aa;line-height:1.8}.final-message h2{margin:18px 0;color:#eafff1}.signature{font-size:12px!important;color:#668273!important}
+#replay-btn{display:block;margin:auto;background:transparent;color:var(--green);border:1px solid var(--green)}
+@media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}.terminal-body{min-height:330px;padding:20px}.code-box{padding:15px;font-size:13px}}
+@media(max-width:450px){.gallery{grid-template-columns:1fr}.birthday-card{padding:25px 10px}}
